@@ -52,6 +52,7 @@ class HeapSort
     public function run()
     {
         $this->createHeap();
+        // print_r($this->data);
         while ($this->count > 0) {
             /* 这是一个大顶堆 , 所以堆顶的节点必须是最大的
                根据此特点 , 每次都将堆顶数据移到最后一位
@@ -74,7 +75,7 @@ class HeapSort
     }
 
     /**
-     * 从 数组 的第 $i 个节点开始至 数组长度为0 结束 , 递归的将其 ( 包括其子节点 ) 转化为一个小顶堆
+     * 从 数组 的第 $i 个节点开始至 数组长度为0 结束 , 递归的将其 ( 包括其子节点 ) 转化为一个小顶堆 (有点复杂,不如非递归的易懂,交换次数也更多一些)
      *
      * @param $data
      * @param $i
